@@ -3,7 +3,7 @@ package builtin
 import (
 	"fmt"
 
-	"qlang.io/cl/qlang"
+	"github.com/xushiwei/qlang"
 )
 
 // Reg 注册内置函数，不注册不能使用

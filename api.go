@@ -2,10 +2,10 @@ package flow
 
 import (
 	"errors"
+	"flow/schema"
 	"net/http"
 	"strconv"
 
-	"github.com/antlinker/flow/schema"
 	"github.com/teambition/gear"
 )
 

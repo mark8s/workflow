@@ -5,7 +5,7 @@ import (
 	"database/sql"
 	"time"
 
-	"qlang.io/cl/qlang"
+	"github.com/xushiwei/qlang"
 )
 
 type dbkey struct{}

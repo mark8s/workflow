@@ -3,12 +3,11 @@ package sql
 import (
 	"context"
 	"database/sql"
+	"flow/expression"
 	"fmt"
 	"strings"
 
-	"github.com/antlinker/flow/expression"
-
-	"qlang.io/cl/qlang"
+	"github.com/xushiwei/qlang"
 )
 
 // execDB 从ctx获取数据库

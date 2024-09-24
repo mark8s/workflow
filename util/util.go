@@ -1,15 +1,15 @@
 package util
 
 import (
-	"strconv"
-
 	"github.com/fatih/structs"
-	"github.com/satori/go.uuid"
+	uuid "github.com/satori/go.uuid"
+	"strconv"
 )
 
 // UUID 获取UUID
 func UUID() string {
-	return uuid.Must(uuid.NewV4()).String()
+	var err error
+	return uuid.Must(uuid.NewV4(), err).String()
 }
 
 // StructToMap 转换struct为map

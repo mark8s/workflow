@@ -3,8 +3,7 @@ package flow
 import (
 	"context"
 	"encoding/json"
-
-	"github.com/antlinker/flow/expression"
+	"flow/expression"
 )
 
 // Execer 表达式执行器

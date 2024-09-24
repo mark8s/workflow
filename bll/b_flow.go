@@ -1,13 +1,12 @@
 package bll
 
 import (
+	"flow/model"
+	"flow/schema"
+	"flow/util"
 	"fmt"
 	"sync"
 	"time"
-
-	"github.com/antlinker/flow/model"
-	"github.com/antlinker/flow/schema"
-	"github.com/antlinker/flow/util"
 )
 
 // Flow 流程管理
@@ -377,8 +376,8 @@ func (a *Flow) QueryTodoFlowInstanceResult(userID, typeCode, flowCode string, la
 }
 
 // QueryWebTodoFlowInstanceResult web查询待办的流程实例数据
-func (a *Flow) QueryWebTodoFlowInstanceResult(userID, typeCode, flowCode string,  count int,ParamSearchList map[string]string) ([]*schema.FlowWebInstanceResult,int64, error) {
-	return a.FlowModel.QueryTodoWebFlowInstanceResult(userID, typeCode, flowCode, count,ParamSearchList)
+func (a *Flow) QueryWebTodoFlowInstanceResult(userID, typeCode, flowCode string, count int, ParamSearchList map[string]string) ([]*schema.FlowWebInstanceResult, int64, error) {
+	return a.FlowModel.QueryTodoWebFlowInstanceResult(userID, typeCode, flowCode, count, ParamSearchList)
 }
 
 // QueryHandleFlowInstanceResult 查询处理的流程实例结果
@@ -387,8 +386,8 @@ func (a *Flow) QueryHandleFlowInstanceResult(processor, typeCode, flowCode strin
 }
 
 // QueryWebHandleFlowInstanceResult web查询处理的流程实例结果
-func (a *Flow) QueryWebHandleFlowInstanceResult(processor, typeCode, flowCode string, lastID int64, count int , ParamSearchList map[string]string ) ([]*schema.FlowInstanceResult,int64, error) {
-	return a.FlowModel.QueryWebHandleFlowInstanceResult(processor, typeCode, flowCode, lastID, count,ParamSearchList)
+func (a *Flow) QueryWebHandleFlowInstanceResult(processor, typeCode, flowCode string, lastID int64, count int, ParamSearchList map[string]string) ([]*schema.FlowInstanceResult, int64, error) {
+	return a.FlowModel.QueryWebHandleFlowInstanceResult(processor, typeCode, flowCode, lastID, count, ParamSearchList)
 }
 
 // QueryLastNodeInstances 查询流程实例的最后一个节点实例
@@ -406,9 +405,9 @@ func (a *Flow) QueryLastNodeInstances(flowInstanceIDs []string) (map[string]*sch
 }
 
 // QueryWebLastNodeInstances web查询流程实例的最后一个节点实例
-func (a *Flow) QueryWebLastNodeInstances(flowInstanceIDs []string,ParamSearchList map[string]string,isComplete bool) (map[string]*schema.NodeInstance, error) {
+func (a *Flow) QueryWebLastNodeInstances(flowInstanceIDs []string, ParamSearchList map[string]string, isComplete bool) (map[string]*schema.NodeInstance, error) {
 
-	items, err := a.FlowModel.QueryWebLastNodeInstances(flowInstanceIDs,ParamSearchList,isComplete)
+	items, err := a.FlowModel.QueryWebLastNodeInstances(flowInstanceIDs, ParamSearchList, isComplete)
 	if err != nil {
 		return nil, err
 	}

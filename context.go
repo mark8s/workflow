@@ -2,8 +2,7 @@ package flow
 
 import (
 	"context"
-
-	"github.com/antlinker/flow/expression"
+	"flow/expression"
 )
 
 type (

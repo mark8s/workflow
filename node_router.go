@@ -3,8 +3,8 @@ package flow
 import (
 	"context"
 	"encoding/json"
+	"flow/schema"
 
-	"github.com/antlinker/flow/schema"
 	"github.com/pkg/errors"
 )
 

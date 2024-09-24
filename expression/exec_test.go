@@ -2,11 +2,10 @@ package expression_test
 
 import (
 	"context"
+	"flow/expression"
 	"os"
 	"reflect"
 	"testing"
-
-	"github.com/antlinker/flow/expression"
 )
 
 func TestMain(m *testing.M) {

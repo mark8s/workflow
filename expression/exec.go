@@ -3,11 +3,10 @@ package expression
 import (
 	"bytes"
 	"fmt"
+	"github.com/pkg/errors"
 	"sync/atomic"
 
-	"qlang.io/cl/qlang"
-
-	"github.com/pkg/errors"
+	"github.com/xushiwei/qlang"
 )
 
 // CreateExecer 创建表达式执行器

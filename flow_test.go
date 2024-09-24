@@ -2,16 +2,15 @@ package flow_test
 
 import (
 	"encoding/json"
-	"testing"
-
-	"github.com/antlinker/flow"
-	"github.com/antlinker/flow/service/db"
+	"flow"
+	"flow/service/db"
 	_ "github.com/go-sql-driver/mysql"
+	"testing"
 )
 
 func init() {
 	flow.Init(
-		db.SetDSN("root:123456@tcp(127.0.0.1:3306)/flow_test?charset=utf8"),
+		db.SetDSN("root:password@tcp(10.31.0.220:34616)/flow_test?charset=utf8"),
 		db.SetTrace(false),
 	)
 

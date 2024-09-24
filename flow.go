@@ -3,11 +3,10 @@ package flow
 import (
 	"context"
 	"encoding/json"
+	"flow/expression/sql"
+	"flow/schema"
+	"flow/service/db"
 	"net/http"
-
-	"github.com/antlinker/flow/expression/sql"
-	"github.com/antlinker/flow/schema"
-	"github.com/antlinker/flow/service/db"
 )
 
 var (
